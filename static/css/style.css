@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Akatab:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Akatab", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color-bone: #F6F6F3;
+    --font-color-black: #000;
+    --main-light-accent-color: #EEEDEA;
+}
+
+body {
+    background: var(--main-bg-color-bone);
+    margin: 0;
+}
+
+header {
+    background: var(--main-bg-color-bone);
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    max-height: 110px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-family: "Abyssinica SIL", serif;
+    font-size: 64px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--font-color-black);
+}
+
+.searchncart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.search input {
+    background-color: var(--main-bg-color-bone);
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.search input:focus-visible {
+    outline-color: var(--main-light-accent-color);
+    outline-style: solid;
+}
+
+/* Main Page */
+.intro {
+    max-height: 100vh;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.left-decoration-text {
+    margin-left: 40px;
+    padding: 40px 0;
+    max-height: 760px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.left-decoration-text .top-text {
+    margin-bottom: 40px;
+    letter-spacing: 35%;
+}
+
+.left-decoration-text .bottom-text {
+    margin-top: 90px;
+    letter-spacing: 35%;
+}
+
+.promo {
+    width: 500px;
+    margin: auto;
+    max-height: 760px;
+    padding: 20px;
+    grid-area: 1 / 2 / 2 / 4;
+
+    background-image: repeating-linear-gradient(90deg, #000000, #000000 25px, transparent 25px, transparent 45px), repeating-linear-gradient(180deg, #000000, #000000 25px, transparent 25px, transparent 45px), repeating-linear-gradient(90deg, #000000, #000000 25px, transparent 25px, transparent 45px), repeating-linear-gradient(180deg, #000000, #000000 25px, transparent 25px, transparent 45px);
+    background-position: left top, right top, left bottom, left top;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+}
+
+.promo .image {
+    border-bottom: 2px dotted var(--font-color-black);
+    width: 100%;
+    text-align: center;
+}
+
+.promo .image img {
+    width: 40vh;
+}
+
+.promo h3 {
+    font-family: "Abyssinica SIL", serif;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.promo .button {
+    margin: 20px;
+    background: var(--font-color-black);
+    color: var(--main-bg-color-bone);
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+/* Items Page */
+.items {
+    margin: 20px 40px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70vw;
+    align-items: center;
+    margin: auto;
+}
+
+.filters ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px
+}
+
+.filters ul li.active {
+    border-bottom: 2px solid var(--font-color-black);
+}
+
+.cards-wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    min-width: 260px;
+    max-width: 350px;
+}
+
+.card .card-image {
+    padding: 10px;
+    height: 260px;
+    background: var(--main-light-accent-color);
+    overflow: hidden;
+}
+
+.card .card-image img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.card-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card-item-name {
+    margin: 10px 0;
+}
+
+.card-item-price {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.add-to-cart {
+    padding-bottom: 10px;
+}
