@@ -9,8 +9,10 @@
 
 :root {
     --main-bg-color-bone: #F6F6F3;
+    --main-bg-color-bone-opacity: rgba(246, 246, 243, 0.5);
     --font-color-black: #000;
     --main-light-accent-color: #EEEDEA;
+    --main-light-accent-color-opacity: #eeedea86;
 }
 
 body {
@@ -29,6 +31,7 @@ header {
     max-height: 110px;
     position: sticky;
     top: 0;
+    z-index: 3;
 }
 
 .logo {
@@ -165,22 +168,22 @@ header {
 .cards-wrapper {
     margin-top: 40px;
     display: grid;
-    grid-auto-flow: column;
     justify-content: space-between;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .card {
     min-width: 260px;
     max-width: 350px;
+    z-index: 2;
 }
 
 .card .card-image {
     padding: 10px;
     height: 260px;
-    background: var(--main-light-accent-color);
+    background: var(--main-light-accent-color-opacity);
     overflow: hidden;
 }
 
@@ -193,6 +196,8 @@ header {
 .card-text-wrapper {
     display: flex;
     flex-direction: row;
+    padding: 0 10px;
+    background: var(--main-light-accent-color-opacity);
     justify-content: space-between;
     align-items: end;
 }
@@ -208,4 +213,59 @@ header {
 
 .add-to-cart {
     padding-bottom: 10px;
+}
+
+.items .bg-svg {
+    user-select: none;
+    position: absolute;
+    pointer-events: none;
+}
+
+.items .star-1 {
+    right: 0;
+    z-index: 0;
+}
+
+.items .star-2 {
+    right: 15vw;
+    top: 1300px;
+    z-index: 0;
+}
+
+.items .star-3 {
+    left: -150px;
+    top: 800px;
+    z-index: 0;
+}
+
+
+/* Footer styles */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    letter-spacing: 30%;
+    cursor: default;
+}
+
+.left-text {
+    padding: 40px;
+    padding-top: 0;
+    font-size: 14px;
+}
+
+.mid-content {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--font-color-black);
+    gap: 100px;
+    padding-top: 40px;
+}
+
+.mid-content .text-left,.pagination, .pagination span{
+    font-size: 14px;
+}
+.mid-content .text-right span{
+    font-size: 14px;
 }
