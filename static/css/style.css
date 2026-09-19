@@ -282,8 +282,8 @@ footer {
 }
 
 .brands {
-    height: 100vh;
-    margin: 100px 40px;
+    height: 85vh;
+    margin: 50px 40px;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 40px;
@@ -338,6 +338,7 @@ footer {
 }
 
 .chrome {
+    width: clamp(200px, 9vw, 150px);
     grid-column: 9 / 12;
     grid-row: 6 / 9;
 }
@@ -371,4 +372,81 @@ footer {
     grid-row: 9;
     font-weight: 500;
     cursor: pointer;
+}
+
+/* ARCHIVE */
+
+.archive {
+    height: 85vh;
+    margin: 50px 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.archive h2 {
+    margin: 25px 0;
+    font-family: "Abyssinica SIL", serif;
+    line-height: 1;
+    font-size: 84px;
+}
+
+.rb-label {
+    text-align: right;
+    align-self: flex-end;
+    letter-spacing: 35%;
+}
+
+.archive-collage {
+    position: relative;
+}
+
+.archive-image {
+    max-height: 60vh;
+    position: absolute;
+}
+
+.jackets-1 {
+    right: 0;
+}
+
+.jackets-1 {
+    bottom: 7vh;
+    right: 0;
+}
+
+.sticker-stss {
+    max-height: 35vh;
+    top: -20px;
+    left: -80px;
+}
+
+.bag {
+    max-height: 25vh;
+    bottom: -40px;
+    left: -125px;
+    box-shadow: -1px -2px 2px 0px var(--main-bg-color-bone);
+}
+
+.jackets-2 {
+    max-height: 30vh;
+    bottom: 50px;
+    left: 50px;
+}
+
+.chair {
+    max-height: 30vh;
+    top: 150px;
+    left: 170px;
+}
+
+.sticker {
+    max-height: 20vh;
+    bottom: -85px;
+    right: 90px;
+}
+
+.archive-collage .star-1 {
+    position: absolute;
+    left: 295px;
 }
