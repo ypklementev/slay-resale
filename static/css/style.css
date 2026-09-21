@@ -71,6 +71,10 @@ header {
     outline-style: solid;
 }
 
+.cart span{
+    vertical-align: -webkit-baseline-middle;
+}
+
 /* Main Page */
 .intro {
     max-height: 100vh;
@@ -484,7 +488,6 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    overflow: hidden;
 }
 
 .journal-item {
